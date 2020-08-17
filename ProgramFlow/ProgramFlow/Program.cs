@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 { 
-    // 46 Using the equality operator
+    // 47_boolean_Or_Operator
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 42;
-            int y = 1;
-            int z = 42;
+            int x = 5;
+            int y = 5;
+            int z = 6;
 
-            bool a = x < y;
-            bool b = x == z;
+            bool result = x == y || y == z;
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            Console.WriteLine(result);
         }
     }
 }
