@@ -5,21 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProgramFlow
-{ 
-    // 48_Short_Circuiting the OR operator
+{
+    // 49_50_And_Operator
     class Program
     {
         static void Main(string[] args)
         {
-            bool x = false;
-            
-            bool result = x || GetY();
-            // bool result = x | GetY(); --> call both methods, no short circuit 
+           // int value = 42;
+           // bool result = (value > 0) && (value < 100); // 
+
+          //  Console.WriteLine(result); // --> call both methods, no short circuit
+
+            string input = null;
+            bool result = (input != null) && GetY();
+            //  input != null = false, so GetY() wont get called
         }
 
         public static bool GetY()
         {
-            Console.WriteLine("this methos doesnt get called");
+            Console.WriteLine("OUTPUT");
             return true;
         }
     }
