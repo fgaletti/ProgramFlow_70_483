@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 {
-    // 49_50_And_Operator
+    // 52_basic_if
     class Program
     {
         static void Main(string[] args)
         {
-           // int value = 42;
-           // bool result = (value > 0) && (value < 100); // 
+            int x = 5;
 
-          //  Console.WriteLine(result); // --> call both methods, no short circuit
+            int z = x == 10 ? 10 : 0;
 
-            string input = null;
-            bool result = (input != null) && GetY();
-            //  input != null = false, so GetY() wont get called
+            Console.WriteLine(z);
         }
 
-        public static bool GetY()
-        {
-            Console.WriteLine("OUTPUT");
-            return true;
-        }
     }
 }
