@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 { 
-    // 47_boolean_Or_Operator
+    // 48_Short_Circuiting the OR operator
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 5;
-            int y = 5;
-            int z = 6;
+            bool x = false;
+            
+            bool result = x || GetY();
+            // bool result = x | GetY(); --> call both methods, no short circuit 
+        }
 
-            bool result = x == y || y == z;
-
-            Console.WriteLine(result);
+        public static bool GetY()
+        {
+            Console.WriteLine("this methos doesnt get called");
+            return true;
         }
     }
 }
