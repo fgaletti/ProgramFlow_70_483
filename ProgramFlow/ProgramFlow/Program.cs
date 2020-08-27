@@ -6,16 +6,33 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 {
-    // 52_basic_if
+    // 62_switch_statement
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 5;
+            int x = 15;
 
-            int z = x == 10 ? 10 : 0;
+            switch(x)
+            {
+                case 13:
+                case 14:
+                    {
+                        Console.WriteLine("value is 14  ");
+                        goto case 15;
+                    }
+                case 15:
+                    {
+                        Console.WriteLine("value is 15  ");
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("DEfault");
+                        break;
+                    }
+            }
 
-            Console.WriteLine(z);
         }
 
     }
