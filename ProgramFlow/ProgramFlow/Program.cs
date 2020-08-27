@@ -6,31 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 {
-    // 62_switch_statement
+    // 64_basic loop
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 15;
+            int[] values = { 1, 2, 3, 4, 5 };
 
-            switch(x)
+            foreach(int val in values)
             {
-                case 13:
-                case 14:
-                    {
-                        Console.WriteLine("value is 14  ");
-                        goto case 15;
-                    }
-                case 15:
-                    {
-                        Console.WriteLine("value is 15  ");
-                        break;
-                    }
-                default:
-                    {
-                        Console.WriteLine("DEfault");
-                        break;
-                    }
+                Console.WriteLine(val);
             }
 
         }
