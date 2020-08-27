@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace ProgramFlow
 {
-    // 64_basic loop
+    // goto 
     class Program
     {
         static void Main(string[] args)
         {
-            int[] values = { 1, 2, 3, 4, 5 };
-
-            foreach(int val in values)
+            int x = 3;
+            if (x == 3)
             {
-                Console.WriteLine(val);
+                goto customlabel;
             }
+            x++;
 
+            customlabel:
+            Console.WriteLine(x);
         }
 
     }
